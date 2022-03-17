@@ -56,11 +56,11 @@ class Moderation(commands.Cog):
 
     @commands.command()
     async def softban(self, ctx):
-        await ctx.reply("works")
+        pass
 
     @commands.command()
     async def ban(self, ctx):
-        await ctx.reply("works")
+        pass
 
 
 def setup(bot):
