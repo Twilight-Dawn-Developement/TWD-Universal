@@ -7,6 +7,7 @@ load_dotenv()
 
 
 bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"), intents=discord.Intents.all())
+bot.remove_command("help")
 
 
 @bot.event

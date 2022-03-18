@@ -38,7 +38,6 @@ class Moderation(commands.Cog):
                                                             description="User nicht gefunden."))
                         return True
 
-
                 if reason is not None:
                     await user.kick(reason=reason)
                 else:
@@ -56,11 +55,11 @@ class Moderation(commands.Cog):
 
     @commands.command()
     async def softban(self, ctx):
-        pass
+        await ctx.reply("works")
 
     @commands.command()
     async def ban(self, ctx):
-        pass
+        await ctx.reply("works")
 
 
 def setup(bot):
