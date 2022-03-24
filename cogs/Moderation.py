@@ -54,8 +54,22 @@ class Moderation(commands.Cog):
 
 
     @commands.command()
-    async def softban(self, ctx):
-        await ctx.reply("works")
+    async def softban(self, ctx, user = discord.Member, reason = str):
+        modrole = get(ctx.guild.roles, int(os.getenv("MODID")))
+        banrole = get(ctx.guild.roles, int(os.getenv("BANID")))
+
+        if modrole in ctx.author.roles:
+            try:
+                await user.add_roles(anrole)
+
+            except:
+                embed = discord.Embed(
+                    title="Twilight Dawn Moderation",
+                    description="Bitte markiere eine Person oder gib eine ID an."
+                )
+                await ctx.reply(embed=embed)
+
+        
 
     @commands.command()
     async def ban(self, ctx):
